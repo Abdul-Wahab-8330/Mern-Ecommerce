@@ -16,7 +16,7 @@ const shopSearchRouter = require('./routes/shop/search-routes')
 
 
 
-mongoose.connect('mongodb+srv://abdulwahabeeee5:abdulwahabatlas@cluster0.mujzo.mongodb.net/')
+mongoose.connect(process.env.MONGO_URI)
 .then(()=>console.log('mongoDB connected'))
 .catch((error)=>console.log(error))
 
